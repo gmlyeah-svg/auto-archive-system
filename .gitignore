@@ -1,0 +1,20 @@
+# 依赖与构建产物（体积大，不入库）
+node_modules/
+out/
+release/
+dist/
+
+# 日志与临时
+*.log
+*.tsbuildinfo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 数据目录（业务数据不入库）
+database/
+*.db
+*.db-wal
+*.db-shm

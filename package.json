@@ -1,0 +1,64 @@
+{
+  "name": "local-archive-system",
+  "version": "1.0.0",
+  "description": "本地汽修档案管理系统（Local Automotive Archive System）",
+  "main": "out/main/index.js",
+  "author": "Archive System",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "pack": "electron-vite build && electron-builder --win --dir",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "backend:check": "tsc --noEmit -p tsconfig.node.json",
+    "renderer:check": "tsc --noEmit -p tsconfig.web.json"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "sql.js": "^1.11.0"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@types/archiver": "^6.0.2",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/sql.js": "^1.4.9",
+    "@vitejs/plugin-react": "^4.3.1",
+    "antd": "^5.20.0",
+    "dayjs": "^1.11.12",
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^2.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
+  },
+  "build": {
+    "appId": "com.local.autarchive",
+    "productName": "AutoArchive",
+    "electronVersion": "31.7.7",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "**/node_modules/sql.js/**"
+    ],
+    "npmRebuild": false,
+    "win": {
+      "target": [
+        "dir"
+      ],
+      "icon": "build/icon.png",
+      "executableName": "AutoArchive"
+    }
+  }
+}
