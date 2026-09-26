@@ -1,0 +1,74 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>AutoArchive 使用教程</title><style>
+body{font-family:-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;max-width:860px;margin:0 auto;padding:24px 28px;color:#333;background:#f7f8fa;line-height:1.8;font-size:15px}
+.guide{background:#fff;border:1px solid #eceef1;border-radius:10px;padding:28px 34px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+h1{font-size:26px;color:#1f2d3d;margin:0 0 4px}
+.tagline{color:#8896a5;font-size:14px;margin:0 0 20px}
+h2{font-size:19px;color:#2f4257;border-left:4px solid #4a6076;padding-left:10px;margin:28px 0 12px}
+h3{font-size:16px;color:#3d4f63;margin:18px 0 8px}
+ol,ul{padding-left:22px;margin:8px 0}
+li{margin:6px 0}
+code{background:#f0f3f6;padding:1px 6px;border-radius:4px;font-size:13px;color:#2f4257}
+.note{background:#eef3f7;border-left:4px solid #4a6076;padding:10px 14px;border-radius:6px;margin:12px 0}
+.warn{background:#fff3f0;border-left:4px solid #e05b44;padding:10px 14px;border-radius:6px;margin:12px 0}
+.btn{display:inline-block;background:#4a6076;color:#fff;padding:4px 10px;border-radius:6px;font-size:13px}
+table{border-collapse:collapse;width:100%;margin:10px 0}
+th,td{border:1px solid #e5e9ee;padding:6px 10px;font-size:14px;text-align:left}
+th{background:#f4f6f8}
+</style></head><body><div class="guide">
+<h1>AutoArchive 汽修档案管理系统 · 使用教程</h1>
+<p class="tagline">本机运行、离线可用；客户/车辆/工单/图片/库存/收款一站式管理，数据整包可携带。</p>
+
+<h2>一、启动</h2>
+<ul>
+<li>双击 <code>AutoArchive.exe</code> 即可打开，<b>无需安装</b>、无需联网。</li>
+<li>首次启动自动创建数据目录（默认 <code>D:\database</code>；无 D 盘则放到「文档/本地汽修档案数据」）。</li>
+</ul>
+
+<h2>二、数据 = 一个文件夹（最重要）</h2>
+<ul>
+<li>所有业务数据 + 图片 + 附件都在<b>数据目录</b>里（默认 <code>D:\database</code>）。</li>
+<li>整包备份：把这个文件夹拷贝/压缩，就是完整备份；拷到别的电脑即可继续用。</li>
+<li>右上角「<b>备份</b>」：一键打包成 <code>归档系统备份_日期.zip</code> 到 U盘/硬盘。</li>
+<li>右上角「<b>切换数据目录</b>」：换用另一份数据或存放位置。</li>
+</ul>
+
+<h2>三、最常用：开单（接待新客户）</h2>
+<p>顶部点<b>「开单」</b>，全程在一个页面完成，不用跳来跳去：</p>
+<ol>
+<li>客户框 <b>＋新建客户</b>：填姓名、手机号 → 自动选中。</li>
+<li>车辆框 <b>＋新建车辆</b>：填车牌、品牌/车型（里面的「车主」也能 ＋新建客户）→ 自动选中。</li>
+<li>接待框 <b>＋新建</b>：填员工姓名、角色（店主/技师/前台）。</li>
+<li>选<b>工单类型</b>（保养/维修/改装/检查）、填备注 → <b>创建并进入编辑</b>。</li>
+</ol>
+
+<h2>四、工单详情</h2>
+<ul>
+<li>改基本信息、类型、<b>技师</b>（可多选）。</li>
+<li>添加<b>施工项目</b>（工时费）与<b>使用配件</b>（从库存选，自动显示库存提示）。</li>
+<li>上传<b>施工照片</b>（施工前/中/后/故障）。</li>
+<li>按类型填专属信息：保养→机油/下次保养；维修→故障码/方案；改装→品牌/序列号。</li>
+<li><b>打印 / 导出 PDF</b>：先弹 A4 预览，再选「打印」或「导出 PDF」（导出自动打开，并存入左侧<b>附件</b>）。</li>
+<li><b>收款</b>：填金额、付款方式，收款后工单自动完成，联动更新车辆/库存/统计。</li>
+</ul>
+<p class="note">工单状态：草稿 → 待施工 → 施工中 → 待验收 → 待收款 → 已完成；可 取消/退款。</p>
+
+<h2>五、其他功能</h2>
+<ul>
+<li><b>仪表盘</b>：今/月工单数、营收；库存预警；<b>保养/保险/年检到期提醒</b>（点忽略可隐藏，右上角恢复）。</li>
+<li><b>客户 / 车辆管理</b>：侧边栏「档案」折叠组里，可增改删、搜索；车辆 → 「档案」看<b>时间轴</b>（工单+照片+统计）。</li>
+<li><b>配件库存</b>：入库/出库/盘点（记流水），低于最低库存自动预警。</li>
+<li><b>报表</b>：营业/客户/车型/保养/库存，可<b>导出 CSV/Excel</b>。</li>
+<li><b>设置</b>：店铺名称、提醒提前天数、技师/操作人管理、数据目录。</li>
+</ul>
+
+<h2>六、常见问题</h2>
+<div class="warn"><b>换电脑：</b>把整个 <code>AutoArchive</code> 文件夹 <b>+ 数据文件夹</b> 一起拷过去即可。只拷程序 = 新电脑是空档案。</div>
+<div class="warn"><b>限制：</b>仅适用于 <b>64 位 Windows（Win10/Win11）</b>；苹果 Mac、Linux、手机、老 Win7 不支持。</div>
+<ul>
+<li><b>数据在哪</b>：默认 <code>D:\database</code>；可在设置/右上角查看、切换。</li>
+<li><b>忘了一辆车</b>：「档案 → 车辆管理」或仪表盘提醒点进时间轴，看全部历史。</li>
+<li><b>PDF 打不开</b>：确认系统有默认 PDF 阅读器；也可在工单「附件」里点「打开」。</li>
+<li><b>数据安全</b>：建议定期右上角<b>备份</b>到 U盘/移动硬盘。</li>
+</ul>
+<p style="text-align:center;color:#8896a5;margin-top:26px">— AutoArchive · 祝生意兴隆 —</p>
+</div></body></html>
